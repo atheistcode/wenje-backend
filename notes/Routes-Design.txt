@@ -1,0 +1,38 @@
+Auth:
+------
+1. /api/auth/signup                             POST    Sign up user
+2. /api/auth/signin                             POST    Sign in user
+3. /api/auth/forgotpassword                     POST    Send password reset URL
+4. /api/auth/resetpassword/:resetToken          PATCH   Update user password
+
+Users:
+------
+1. /api/users/                                  GET     Get all users
+2. /api/users/:userId                           GET     Get user
+3. /api/users/me                                GET     Get me
+4. /api/users/update                            PATCH   Update user
+5. /api/users/updatepassword                    PATCH   Update user password
+6. /api/users/delete                            DELETE  Delete user
+7. /api/users/search                            GET     Search users
+8. /api/users/follow                            PATCH   Follow user
+9. /api/users/unfollow                          PATCH   Unfollow user
+10. /api/users/findpeople                        GET     Get who to follow users
+
+Posts:
+------
+1. /api/posts/addpost                           POST    Add post
+2. /api/posts/:postId                           GET     Get post
+3. /api/posts/:postId                           DELETE  Delete post
+4. /api/posts/byuser/:userId                    GET     Get posts by user
+5. /api/posts/newsfeed                          GET     Get posts from following users
+
+Comments:
+------
+1. /api/posts/:postId/comments                  POST    Add comment
+2. /api/posts/:postId/comments                  GET     Get comment
+3. /api/posts/:postId/comments/:commentId       DELETE  Delete comment
+
+Likes:
+------
+1. /api/posts/:postId/likes                     POST    Like/Unlike post
+2. /api/posts/:postId/comments/:commentId/likes POST    Like/Unlike comment
