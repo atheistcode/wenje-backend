@@ -74,7 +74,7 @@ const UserSchema = new mongoose.Schema(
       url: {
         type: String,
         default:
-          "https://res.cloudinary.com/ahmed-rezk/image/upload/v1595505350/wenje/profile-images/standard-user-image_kup9gd.png",
+          "https://res.cloudinary.com/ahmile/image/upload/v1595505350/wenje/profile-images/standard-user-image_kup9gd.png",
         maxlength: [200, "Max length allowed for an image URL is 200 characters."],
         validate: {
           validator: validator.isURL,
