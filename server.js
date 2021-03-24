@@ -8,7 +8,7 @@ const app = require("./app");
 app.listen(process.env.PORT, () => console.log(`Server started and listening to port "${process.env.PORT}".`));
 
 /* CONNECT TO DATABASE */
-const mongoUri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.3itud.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority`;
+const mongoUri = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.${process.env.MONGO_STRCODE}.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority`;
 
 mongoose
   .connect(mongoUri, {
